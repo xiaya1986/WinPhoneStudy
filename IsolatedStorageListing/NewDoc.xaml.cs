@@ -33,7 +33,18 @@ namespace IsolatedStorageListing
             if (fileNameTB.Text != "" && contentTB.Text != "")
             {
                 createSample(fileNameTB.Text, contentTB.Text);
-                MessageBox.Show("File created successfully!");
+                var appStorage = IsolatedStorageFile.GetUserStoreForApplication();
+                if (appStorage.FileExists(fileNameTB.Text))
+                {
+                    fileNameTB.Text = "";
+                    contentTB.Text = ""; 
+                    this.Focus();
+                    MessageBox.Show("File created successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create file!");
+                }
             }
         }
 
