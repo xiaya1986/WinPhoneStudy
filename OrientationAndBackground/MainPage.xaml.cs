@@ -20,5 +20,23 @@ namespace OrientationAndBackground
         {
             InitializeComponent();
         }
+
+        private void myButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBox1.Visibility == System.Windows.Visibility.Visible)
+            {
+                myButton.Content = "Edit";
+                textBlock1.Text = textBox1.Text;
+                textBox1.Visibility = System.Windows.Visibility.Collapsed;
+                textBlock1.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                myButton.Content = "Save";
+                textBox1.Text = textBlock1.Text;
+                textBox1.Visibility = System.Windows.Visibility.Visible;
+                textBlock1.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
     }
 }

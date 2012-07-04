@@ -27,7 +27,12 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Rectangle Height="260" HorizontalAlignment="Stretch" Margin="0,6,0,0" Name="rectangle1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Fill="#A1000000" />
+            <TextBlock Height="193" HorizontalAlignment="Stretch" Margin="0,6,0,0" Name="textBlock1" Text="Hello world" VerticalAlignment="Top" Visibility="Visible"/>
+            <TextBox Height="193" HorizontalAlignment="Stretch" Margin="0,6,0,0" Name="textBox1" Text="" VerticalAlignment="Top" Visibility="Collapsed"/>
+            <Button Name="myButton" HorizontalAlignment="Stretch" Margin="0,200,0,0" VerticalAlignment="Top" Width="250" Content="Edit" Click="myButton_Click"/>
+        </Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/OrientationAndBackground;component/Images/Desert.jpg" Stretch="UniformToFill" />
         </Grid.Background>
